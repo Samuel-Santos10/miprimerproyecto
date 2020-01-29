@@ -22,8 +22,29 @@ namespace miprimerproyecto
 
             sbyte num1 = sbyte.Parse(txtnum1.Text);
             sbyte num2 = sbyte.Parse(txtnum2.Text);
+            int resp = 0;
 
-            lblrespuesta.Text = "Respuesta: " + (num1 + num2);
+            if (optsuma.Checked) {
+                resp = num1 + num2;
+            }
+
+            if (optresta.Checked)
+            {
+                resp = num1 - num2;
+            }
+
+            if (optmultiplicacion .Checked)
+            {
+                resp = num1 * num2;
+            }
+
+            if (optdivicion .Checked)
+            {
+                resp = num1 / num2;
+            }
+
+        
+            lblrespuesta.Text = "Respuesta: " + resp;
 
         }
     }
